@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './discover.css';
 
+const API_KEY = 'c810403a4ebce0a9f3a9d53cef99721d';
+const IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+
 function Discover() {
     const navigate = useNavigate();
+    const [films, setFilms] = useState([]);
+
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`)
+            .then(res => res.json())
+            .then(data => setFilms(data.results))
+            .catch(err => console.log('Error fetching films:', err));
+    }, []);
 
     return (
         <div>
@@ -33,34 +44,18 @@ function Discover() {
                 </div>
 
                 <div className="film-grid">
-                    <div className="film-card">
-                        <div className="film-poster">Poster</div>
-                        <p className="film-name">Film Name</p>
-                        <p className="film-rating">★★★★</p>
-                        <button className="btn-watchlist">+ Watchlist</button>
-                        <button className="btn-log">Log It</button>
-                    </div>
-                    <div className="film-card">
-                        <div className="film-poster">Poster</div>
-                        <p className="film-name">Film Name</p>
-                        <p className="film-rating">★★★</p>
-                        <button className="btn-watchlist">+ Watchlist</button>
-                        <button className="btn-log">Log It</button>
-                    </div>
-                    <div className="film-card">
-                        <div className="film-poster">Poster</div>
-                        <p className="film-name">Film Name</p>
-                        <p className="film-rating">★★★★★</p>
-                        <button className="btn-watchlist">+ Watchlist</button>
-                        <button className="btn-log">Log It</button>
-                    </div>
-                    <div className="film-card">
-                        <div className="film-poster">Poster</div>
-                        <p className="film-name">Film Name</p>
-                        <p className="film-rating">★★★</p>
-                        <button className="btn-watchlist">+ Watchlist</button>
-                        <button className="btn-log">Log It</button>
-                    </div>
+                    {films.map(film => (
+                        <div className="film-card" key={film.id}>
+                            <img
+                                src={IMAGE_BASE + film.poster_path}
+                                alt={film.title}
+                            />
+                            <p className="film-name">{film.title}</p>
+                            <p className="film-rating">⭐ {film.vote_average.toFixed(1)}</p>
+                            <button className="btn-watchlist">+ Watchlist</button>
+                            <button className="btn-log">Log It</button>
+                        </div>
+                    ))}
                 </div>
             </div>
 

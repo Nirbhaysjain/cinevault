@@ -25,17 +25,18 @@ body {
     position: relative;
 }
 
-.logo  {
+.logo {
     font-size: 24px;
     font-weight: bold;
     color: #e50914;
 }
 
-.nav-links{
+.nav-links {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
+
 .nav-links a {
     color: #ffffff;
     text-decoration: none;
@@ -57,12 +58,13 @@ body {
     color: #e50914;
 }
 
-.left-nav{
+.left-nav {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.back-btn{
+
+.back-btn {
     background: none;
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -72,7 +74,7 @@ body {
     font-size: 14px;
 }
 
-.back-btn:hover{
+.back-btn:hover {
     background-color: #e50914;
     border-color: #e50914;
 }
@@ -80,13 +82,13 @@ body {
 /* SEARCH BAR */
 .search-bar input {
     width: 100%;
-    padding: 15px;
+    padding: 12px;
     background-color: #1f1f1f;
     border: 1px solid #333333;
     border-radius: 8px;
     color: #ffffff;
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .search-bar input::placeholder {
@@ -97,11 +99,11 @@ body {
 .filters {
     display: flex;
     gap: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .filters select {
-    padding: 10px 20px;
+    padding: 8px 16px;
     background-color: #1f1f1f;
     border: 1px solid #333333;
     border-radius: 5px;
@@ -110,52 +112,59 @@ body {
     cursor: pointer;
 }
 
-/* FILM GRID */
-.films-section{
-    padding: 30px 40px;
+/* FILMS SECTION */
+.films-section {
+    padding: 20px 40px;
 }
+
+/* FILM GRID */
 .film-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 15px;
 }
 
-.film-card {
+.film-grid .film-card {
     background-color: #1f1f1f;
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 6px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+    width: auto;
+    flex-shrink: unset;
+    overflow: visible;
 }
 
-.film-poster {
-    background-color: #333333;
-    height: 200px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #aaaaaa;
+.film-grid .film-card img {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    border-radius: 4px;
+    display: block;
 }
 
 .film-name {
     font-weight: bold;
+    font-size: 13px;
     color: #ffffff;
+    text-align: center;
 }
 
 .film-rating {
     color: #f5c518;
+    font-size: 12px;
+    text-align: center;
 }
 
 .btn-watchlist {
-    padding: 8px;
+    padding: 6px;
     background-color: #333333;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .btn-watchlist:hover {
@@ -163,60 +172,16 @@ body {
 }
 
 .btn-log {
-    padding: 8px;
+    padding: 6px;
     background-color: #e50914;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .btn-log:hover {
-    background-color: #b20710;
-}
-
-/* MEMBERS LIST */
-.members-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.member-card {
-    background-color: #1f1f1f;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.avatar {
-    font-size: 30px;
-}
-
-.member-name {
-    font-weight: bold;
-    flex: 1;
-}
-
-.member-films {
-    color: #aaaaaa;
-    margin-right: 15px;
-}
-
-.btn-follow {
-    padding: 8px 20px;
-    background-color: #e50914;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.btn-follow:hover {
     background-color: #b20710;
 }
 

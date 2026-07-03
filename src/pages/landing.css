@@ -100,7 +100,7 @@ body {
     border-radius: 2px;
 }
 
-.film-card {
+.landing-card {
     flex-shrink: 0;
     width: 200px;
     cursor: pointer;
@@ -110,14 +110,14 @@ body {
     padding: 0;
 }
 
-.film-card img {
+.landing-card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     display: block;
 }
 
-.film-card p {
+.landing-card p {
     margin-top: 8px;
     font-size: 13px;
     text-align: center;

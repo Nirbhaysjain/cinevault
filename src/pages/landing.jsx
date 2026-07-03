@@ -34,7 +34,7 @@ function Landing() {
                 <h2>Popular This Week</h2>
                 <div className="film-row" id="popular-films">
                     {popularFilms.map(film => (
-                        <div className="film-card" key={film.id}>
+                        <div className="landing-card" key={film.id}>
                             <img
                                 src={IMAGE_BASE + film.poster_path}
                                 alt={film.title}
