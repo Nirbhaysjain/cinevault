@@ -68,7 +68,7 @@ function Discover() {
                 <div className="search-bar">
                     <input
                         type="text"
-                        placeholder="🔍 Search films or shows..."
+                        placeholder="🔍 Search films..."
                         value={searchQuery}
                         onChange={e => setSearchQuery(e.target.value)}
                     />
@@ -105,7 +105,7 @@ function Discover() {
                                 alt={film.title}
                             />
                             <p className="film-name">{film.title}</p>
-                            <p className="film-rating">⭐ {film.vote_average.toFixed(1)}</p>
+                            <p className="film-rating">⭐ {film.vote_average ? film.vote_average.toFixed(1) : 'N/A'}</p>
                             <button className="btn-watchlist">+ Watchlist</button>
                             <button className="btn-log">Log It</button>
                         </div>
