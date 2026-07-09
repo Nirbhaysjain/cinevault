@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./profile.css";
 import BASE_URL from "../config";
 
@@ -29,21 +29,9 @@ function MemberProfile() {
 
   return (
     <div>
-      <nav className="navbar">
-        <div className="left-nav">
-          <button className="back-btn" onClick={() => navigate(-1)}>
-            ← Back
-          </button>
-          <div className="logo">CineVault</div>
-        </div>
-        <div className="nav-links">
-          <Link to="/discover">Discover</Link>
-          <Link to="/members">Members</Link>
-        </div>
-        <div className="nav-profile">
-          <Link to="/profile">👤 Profile</Link>
-        </div>
-      </nav>
+      <button className="about-back-btn" onClick={() => navigate(-1)}>
+        ← Back
+      </button>
 
       <div className="profile-header">
         <div className="profile-avatar">👤</div>
@@ -73,12 +61,6 @@ function MemberProfile() {
           ))}
         </div>
       </div>
-
-      <footer>
-        <p>
-          <Link to="/about">About</Link>
-        </p>
-      </footer>
     </div>
   );
 }
