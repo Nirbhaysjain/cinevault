@@ -1,4 +1,5 @@
 # CineVault 🎬
+🔗 **Backend repo:** [cinevault-backend](https://github.com/Nirbhaysjain/cinevault-backend)
 
 A film tracking web app where users can discover films, log what they've watched, track their mood, and connect with other film lovers.
 
