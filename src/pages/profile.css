@@ -79,6 +79,27 @@ body {
   border-color: #e50914;
 }
 
+/* MEMBER TOPBAR */
+.member-topbar {
+  background-color: #1a1a1a;
+  padding: 14px 24px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.member-back-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.member-back-btn:hover {
+  color: #fff;
+}
+
 /* PROFILE HEADER */
 .profile-header {
   display: flex;
@@ -216,7 +237,7 @@ body {
   display: block;
 }
 
-/* REMOVE BUTTON - CSS drawn X */
+/* REMOVE BUTTON */
 .btn-remove {
   position: absolute;
   top: 8px;

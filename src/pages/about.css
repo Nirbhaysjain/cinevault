@@ -16,6 +16,7 @@
   font-size: 0.9rem;
   margin-bottom: 40px;
   transition: all 0.2s;
+  display: inline-block;
 }
 
 .about-back-btn:hover {

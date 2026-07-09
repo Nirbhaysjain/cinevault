@@ -15,12 +15,10 @@ function MemberProfile() {
       navigate("/login");
       return;
     }
-
     fetch(`${BASE_URL}/user/${id}`)
       .then((res) => res.json())
       .then((data) => setMemberUser(data))
       .catch((err) => console.log("Error:", err));
-
     fetch(`${BASE_URL}/logs/${id}`)
       .then((res) => res.json())
       .then((data) => setLogs(data))
@@ -29,10 +27,11 @@ function MemberProfile() {
 
   return (
     <div>
-      <button className="about-back-btn" onClick={() => navigate(-1)}>
-        ← Back
-      </button>
-
+      <div className="member-topbar">
+        <button className="member-back-btn" onClick={() => navigate(-1)}>
+          ← Back
+        </button>
+      </div>
       <div className="profile-header">
         <div className="profile-avatar">👤</div>
         <div className="profile-info">
@@ -48,7 +47,6 @@ function MemberProfile() {
           </div>
         </div>
       </div>
-
       <div className="tab-content">
         <div className="film-grid">
           {logs.map((log) => (
@@ -64,5 +62,4 @@ function MemberProfile() {
     </div>
   );
 }
-
 export default MemberProfile;
